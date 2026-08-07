@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRCCONN</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>SRCCONN</title>
+
+<style>
+body {
+    background: white;
+    color: #3366cc;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#container {
+    max-width: 700px;
+}
+
+#arrival {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+#tip {
+    font-size: 12px;
+    line-height: 1.4;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>HEADER</h1>
 
-        <p>hey</p>
+<div id="container">
+    <p id="arrival">You are arriving at unknown - SRCCONN</p>
 
-        <p>i miss everyone hi hellop</p>
+    <p id="tip">
+        TIP: SRCTOOL now has a map form! If you are too lazy to use the GUI
+        (which I FRANKLY am), you can join through our info in the main hub!
+        - tempophong
+    </p>
+</div>
 
-        <p id="arrival">You are araving at unknown - null</p>
+<script>
+function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language) {
+    document.getElementById("arrival").textContent =
+        "You are arriving at " + mapname + " - SRCCONN";
+}
+</script>
 
-        <p>hi cide - srcconn</p>
-
-        <div class="footer">
-            <p>ERROR</p>
-            <p>-1%</p>
-        </div>
-    </div>
-
-    <script>
-        function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language) {
-            document.getElementById("arrival").textContent =
-                "You are arriving at " + mapname + " - Source Connection";
-        }
-    </script>
 </body>
 </html>

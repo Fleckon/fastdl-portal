@@ -38,15 +38,24 @@ body {
 
 <div id="container">
     <p id="arrival">You are arriving at unknown - SRCCONN</p>
-
-    <p id="tip">
-        TIP: SRCTOOL now has a map form! If you are too lazy to use the GUI
-        (which I FRANKLY am), you can join through our info in the main hub!
-        - tempophong
-    </p>
+    <p id="tip"></p>
 </div>
 
 <script>
+var tips = [
+    "TIP: SRCTOOL now has a map form! If you are too lazy to use the GUI (which I FRANKLY am), you can join through our info in the main hub! - tempophong",
+    "TIP: The default map is gm_construct9, but you can change this by going to the SETTING section in SRCTOOL. - tempophong",
+    "TIP: My servers are not the best and they are located in Madagascar, which I feel like is the worst location for me. Sorry. - tempophong",
+    "TIP: We could use some developers. - lizzerc",
+    "TIP: Do not disrespect anyone. If you do, I will kill you. - tempophong",
+    "TIP: Please credit me when you are using my maps to generate your own maps, I made the training data for it! - microfarad",
+    "TIP: If something breaks, it is probably a feature. - lizzerc",
+    "TIP: Every finger in my hand is broken - .dme"
+];
+
+document.getElementById("tip").textContent =
+    tips[Math.floor(Math.random() * tips.length)];
+
 function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language) {
     document.getElementById("arrival").textContent =
         "You are arriving at " + mapname + " - SRCCONN";
